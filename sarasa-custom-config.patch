@@ -1,0 +1,90 @@
+diff --git a/config.json b/config.json
+index 62cdd60..a0682fe 100644
+--- a/config.json
++++ b/config.json
+@@ -1,6 +1,6 @@
+ {
+ 	"buildOptions":{},
+-	"familyOrder": ["gothic", "ui", "mono", "mono-slab", "term", "term-slab", "fixed", "fixed-slab"],
++	"familyOrder": ["gothic", "ui", "term", "fixed"],
+ 	"families": {
+ 		"gothic": {
+ 			"isTNUM": true,
+@@ -28,22 +28,10 @@
+ 				"ko_KR": "사라사 고딕 UI"
+ 			}
+ 		},
+-		"mono": {
+-			"isMono": true,
+-			"latinGroup": "iosevka-n",
+-			"naming": {
+-				"en_US": "Sarasa Mono",
+-				"zh_CN": "等距更纱黑体",
+-				"zh_TW": "等距更紗黑體",
+-				"zh_HK": "等距更紗黑體",
+-				"ja_JP": "更紗等幅ゴシック",
+-				"ko_KR": "사라사 고정 폭고딕"
+-			}
+-		},
+ 		"term": {
+ 			"isMono": true,
+ 			"isTerm": true,
+-			"latinGroup": "iosevka-n-term",
++			"latinGroup": "iosevka-custom-term",
+ 			"naming": {
+ 				"en_US": "Sarasa Term",
+ 				"zh_CN": "Sarasa Term",
+@@ -56,7 +44,7 @@
+ 		"fixed": {
+ 			"isMono": true,
+ 			"isTerm": true,
+-			"latinGroup": "iosevka-n-fixed",
++			"latinGroup": "iosevka-custom-fixed",
+ 			"naming": {
+ 				"en_US": "Sarasa Fixed",
+ 				"zh_CN": "Sarasa Fixed",
+@@ -65,44 +53,6 @@
+ 				"ja_JP": "Sarasa Fixed",
+ 				"ko_KR": "Sarasa Fixed"
+ 			}
+-		},
+-		"mono-slab": {
+-			"isMono": true,
+-			"latinGroup": "iosevka-n-slab",
+-			"naming": {
+-				"en_US": "Sarasa Mono Slab",
+-				"zh_CN": "等距更纱黑体 Slab",
+-				"zh_TW": "等距更紗黑體 Slab",
+-				"zh_HK": "等距更紗黑體 Slab",
+-				"ja_JP": "更紗等幅ゴシック Slab",
+-				"ko_KR": "사라사 고정 폭고딕 Slab"
+-			}
+-		},
+-		"term-slab": {
+-			"isMono": true,
+-			"latinGroup": "iosevka-n-term-slab",
+-			"isTerm": true,
+-			"naming": {
+-				"en_US": "Sarasa Term Slab",
+-				"zh_CN": "Sarasa Term Slab",
+-				"zh_TW": "Sarasa Term Slab",
+-				"zh_HK": "Sarasa Term Slab",
+-				"ja_JP": "Sarasa Term Slab",
+-				"ko_KR": "Sarasa Term Slab"
+-			}
+-		},
+-		"fixed-slab": {
+-			"isMono": true,
+-			"latinGroup": "iosevka-n-fixed-slab",
+-			"isTerm": true,
+-			"naming": {
+-				"en_US": "Sarasa Fixed Slab",
+-				"zh_CN": "Sarasa Fixed Slab",
+-				"zh_TW": "Sarasa Fixed Slab",
+-				"zh_HK": "Sarasa Fixed Slab",
+-				"ja_JP": "Sarasa Fixed Slab",
+-				"ko_KR": "Sarasa Fixed Slab"
+-			}
+ 		}
+ 	},
+ 	"styleOrder": [

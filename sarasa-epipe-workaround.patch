@@ -1,0 +1,28 @@
+diff --git a/make/common/support/font-io.js b/make/common/support/font-io.js
+index 497ce68..dbb8d80 100644
+--- a/make/common/support/font-io.js
++++ b/make/common/support/font-io.js
+@@ -47,7 +47,11 @@ exports.buildFont = async function builFont(font, destination, options) {
+ 	} else {
+ 		const ext = path.parse(destination).ext;
+ 		if (ext === ".ttf" || ext === ".otf") {
++			const cache = destination.replace(/.(?:ttf|otf)$/, ".json");
++			const out = fs.createWriteStream(cache);
++			await JsonUtil.fontJsonStringifyToStream(font, out);
+ 			const cp = child_process.spawn(BuildCommand, [
++				...[cache],
+ 				...["-o", destination],
+ 				...(options.optimize ? ["--short-post", "--subroutinize", "--force-cid"] : []),
+ 				...(options.sign ? ["-s"] : []),
+@@ -58,10 +62,7 @@ exports.buildFont = async function builFont(font, destination, options) {
+ 			cp.stderr.on("data", function (data) {
+ 				if (options.verbose) process.stderr.write(data);
+ 			});
+-			await Promise.all([
+-				JsonUtil.fontJsonStringifyToStream(font, cp.stdin),
+-				cpToPromise(cp)
+-			]);
++			await cpToPromise(cp);
+ 		} else {
+ 			const out = fs.createWriteStream(destination);
+ 			await JsonUtil.fontJsonStringifyToStream(font, out);
