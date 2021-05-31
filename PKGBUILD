@@ -1,7 +1,7 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
 pkgname=ttf-sarasa-gothic-custom
-_sarasa_ver=0.31.2
-_iosevka_ver=6.1.3
+_sarasa_ver=0.32.0
+_iosevka_ver=7.0.1
 pkgver="${_sarasa_ver}"
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
@@ -17,7 +17,7 @@ source=(
     sarasa-epipe-workaround.patch
 )
 sha256sums=(
-    c1067305c1d25ade0896cf87305cdaa64750b333470c96724f29c435ee4c631a
+    e3310f6f6097d168fc55a6acf51cdc0c7b593d2184dcfd6961432633779f02ad
     909396a05bf820b220e4bab8790c55defe70bfdbb86d5fa3c0f39609735e88f0
     9d7dcda23d80073da9539796ad9158ad87e0e222e96f2089c6f35e1a8787de90
 )
