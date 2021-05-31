@@ -2,7 +2,7 @@
 pkgname=ttf-sarasa-gothic-custom
 _sarasa_ver=0.31.2
 _iosevka_ver=6.1.3
-pkgver="${_sarasa_ver}_${_iosevka_ver}"
+pkgver="${_sarasa_ver}"
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
 arch=('any')
