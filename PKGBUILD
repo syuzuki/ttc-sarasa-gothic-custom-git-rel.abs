@@ -1,7 +1,7 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
 pkgname=ttf-sarasa-gothic-custom
 _sarasa_ver=0.32.0
-_iosevka_ver=7.0.1
+_iosevka_ver=7.0.2
 pkgver="${_sarasa_ver}_${_iosevka_ver}"
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
