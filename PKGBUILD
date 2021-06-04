@@ -20,17 +20,19 @@ sha256sums=(
     9d7dcda23d80073da9539796ad9158ad87e0e222e96f2089c6f35e1a8787de90
 )
 
-_fetch_repo() (
+_fetch_repo() {
     local repo="$1"
 
     if [[ -e "${repo}" ]]; then
-        cd "${repo}"
-        git fetch
-        git clean -fd
+        (
+            cd "${repo}"
+            git fetch
+            git clean -fd
+        )
     else
         git clone --filter blob:none --no-checkout https://github.com/be5invis/"${repo}"
     fi
-)
+}
 
 prepare() {
     _fetch_repo Iosevka
