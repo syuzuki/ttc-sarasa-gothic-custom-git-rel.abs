@@ -1,8 +1,6 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
 pkgname=ttf-sarasa-gothic-custom
-_sarasa_ver=0.32.0
-_iosevka_ver=7.0.2
-pkgver="${_sarasa_ver}_${_iosevka_ver}"
+pkgver=0.32.0
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
 arch=('any')
@@ -22,26 +20,34 @@ sha256sums=(
     9d7dcda23d80073da9539796ad9158ad87e0e222e96f2089c6f35e1a8787de90
 )
 
-prepare() {
-    for repo in "Iosevka:${_iosevka_ver}" "Sarasa-Gothic:${_sarasa_ver}"; do
-        if [[ -e "${repo%%:*}" ]]; then
-            (
-                cd "${repo%%:*}"
-                git fetch
-                git reset --hard "v${repo#*:}"
-                git clean -fd
-            )
-        else
-            git clone --filter blob:none -b "v${repo#*:}" https://github.com/be5invis/"${repo%%:*}"
-        fi
-    done
+_fetch_repo() (
+    local repo="$1"
 
+    if [[ -e "${repo}" ]]; then
+        cd "${repo}"
+        git fetch
+        git clean -fd
+    else
+        git clone --filter blob:none --no-checkout https://github.com/be5invis/"${repo}"
+    fi
+)
+
+prepare() {
+    _fetch_repo Iosevka
+    _fetch_repo Sarasa-Gothic
+
+    cd Sarasa-Gothic
+    local sarasa_tag="v${pkgver}"
+    local sarasa_tag_date="$(git show --format='format:%ct' "${sarasa_tag}")"
+    git reset --hard "${sarasa_tag}"
+    patch -N -p 1 <../sarasa-custom-config.patch
+    patch -N -p 1 <../sarasa-epipe-workaround.patch
+
+    cd ../Iosevka
+    local iosevka_tags="$(git for-each-ref --merged=@{u} --sort=-committerdate --format='%(refname:lstrip=2) %(committerdate:unix)' refs/tags)"
+    local iosevka_tag="$(awk "\$2 <= ${sarasa_tag_date} { print \$1; exit }" <<<"${iosevka_tags}")"
+    git reset --hard "${iosevka_tag}"
     ln -sf ../private-build-plans.toml Iosevka
-    (
-        cd Sarasa-Gothic
-        patch -N -p 1 <../sarasa-custom-config.patch
-        patch -N -p 1 <../sarasa-epipe-workaround.patch
-    )
 }
 
 build() {
