@@ -1,5 +1,5 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
-pkgname=ttf-sarasa-gothic-custom-git-rel
+pkgname=ttc-sarasa-gothic-custom-git-rel
 pkgver=0.32.3
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
@@ -70,10 +70,10 @@ build() {
     done
     npm install
     npm update
-    npm run build ttf
+    npm run build ttc
 }
 
 package() {
-    install -D -m 644 -t "${pkgdir}/usr/share/fonts/sarasa-gothic" Sarasa-Gothic/out/ttf/*.ttf
+    install -D -m 644 -t "${pkgdir}/usr/share/fonts/sarasa-gothic" Sarasa-Gothic/out/ttc/*.ttc
     install -D -m 644 -t "${pkgdir}/usr/share/licenses/${pkgname}" Sarasa-Gothic/LICENSE
 }
