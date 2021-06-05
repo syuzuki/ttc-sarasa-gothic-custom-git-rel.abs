@@ -1,6 +1,6 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
-pkgname=ttf-sarasa-gothic-custom
-pkgver=0.32.0
+pkgname=ttf-sarasa-gothic-custom-git-rel
+pkgver=0.32.3
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
 arch=('any')
@@ -39,7 +39,7 @@ prepare() {
     _fetch_repo Sarasa-Gothic
 
     cd Sarasa-Gothic
-    local sarasa_tag="v${pkgver}"
+    local sarasa_tag="$(git for-each-ref --merged=@{u} --sort=-committerdate --count=1 --format='%(refname:lstrip=2)' refs/tags)"
     local sarasa_tag_date="$(git show --format='format:%ct' "${sarasa_tag}")"
     git reset --hard "${sarasa_tag}"
     patch -N -p 1 <../sarasa-custom-config.patch
@@ -50,6 +50,12 @@ prepare() {
     local iosevka_tag="$(awk "\$2 <= ${sarasa_tag_date} { print \$1; exit }" <<<"${iosevka_tags}")"
     git reset --hard "${iosevka_tag}"
     ln -sf ../private-build-plans.toml Iosevka
+}
+
+pkgver() {
+    cd Sarasa-Gothic
+    local tag="$(git describe --tags)"
+    echo "${tag#v}"
 }
 
 build() {
