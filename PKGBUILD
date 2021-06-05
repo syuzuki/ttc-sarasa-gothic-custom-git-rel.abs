@@ -8,7 +8,7 @@ url='https://github.com/be5invis/Sarasa-Gothic'
 license=('custom:OFL')
 depends=()
 makedepends=('git' 'nodejs>=12.16.0' 'npm' 'python-fonttools' 'otfcc' 'afdko' 'ttfautohint')
-conflicts=('ttf-sarasa-gothic')
+replaces=('ttf-sarasa-gothic')
 source=(
     private-build-plans.toml
     sarasa-custom-config.patch
@@ -49,7 +49,7 @@ prepare() {
     local iosevka_tags="$(git for-each-ref --merged=@{u} --sort=-committerdate --format='%(refname:lstrip=2) %(committerdate:unix)' refs/tags)"
     local iosevka_tag="$(awk "\$2 <= ${sarasa_tag_date} { print \$1; exit }" <<<"${iosevka_tags}")"
     git reset --hard "${iosevka_tag}"
-    ln -sf ../private-build-plans.toml Iosevka
+    ln -sf ../private-build-plans.toml .
 }
 
 pkgver() {
