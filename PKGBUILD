@@ -15,7 +15,7 @@ source=(
     sarasa-epipe-workaround.patch
 )
 sha256sums=(
-    e3310f6f6097d168fc55a6acf51cdc0c7b593d2184dcfd6961432633779f02ad
+    SKIP
     909396a05bf820b220e4bab8790c55defe70bfdbb86d5fa3c0f39609735e88f0
     9d7dcda23d80073da9539796ad9158ad87e0e222e96f2089c6f35e1a8787de90
 )
