@@ -13,11 +13,13 @@ source=(
     private-build-plans.toml
     sarasa-custom-config.patch
     sarasa-epipe-workaround.patch
+    sarasa-export-glyph-names.patch
 )
 sha256sums=(
     SKIP
     909396a05bf820b220e4bab8790c55defe70bfdbb86d5fa3c0f39609735e88f0
     9d7dcda23d80073da9539796ad9158ad87e0e222e96f2089c6f35e1a8787de90
+    342c7e1c5752105a9998bc4c7d619ed994f17a64f3d6352d0e0cf419a1425b4e
 )
 
 _fetch_repo() {
@@ -44,6 +46,7 @@ prepare() {
     git reset --hard "${sarasa_tag}"
     patch -N -p 1 <../sarasa-custom-config.patch
     patch -N -p 1 <../sarasa-epipe-workaround.patch
+    patch -N -p 1 <../sarasa-export-glyph-names.patch
 
     cd ../Iosevka
     local iosevka_tags="$(git for-each-ref --merged=@{u} --sort=-committerdate --format='%(refname:lstrip=2) %(committerdate:unix)' refs/tags)"
@@ -70,10 +73,10 @@ build() {
     done
     npm install
     npm update
-    npm run build ttc
+    npm run build ttf
 }
 
 package() {
-    install -D -m 644 -t "${pkgdir}/usr/share/fonts/sarasa-gothic" Sarasa-Gothic/out/ttc/*.ttc
+    install -D -m 644 -t "${pkgdir}/usr/share/fonts/sarasa-gothic" Sarasa-Gothic/out/ttf/*.ttf
     install -D -m 644 -t "${pkgdir}/usr/share/licenses/${pkgname}" Sarasa-Gothic/LICENSE
 }
