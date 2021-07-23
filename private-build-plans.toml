@@ -37,6 +37,16 @@ z = "curly-serifless"
 [buildPlans.iosevka-custom-term.ligations]
 inherits = "dlig"
 
+[buildPlans.iosevka-custom-term.weights.regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.iosevka-custom-term.weights.bold]
+shape = 700
+menu = 700
+css = 700
+
 [buildPlans.iosevka-custom-term.slopes]
 upright = "normal"
 italic = "italic"
@@ -76,6 +86,16 @@ w = "cursive-motion-serifed"
 x = "straight-motion-serifed"
 y = "cursive"
 z = "curly-serifless"
+
+[buildPlans.iosevka-custom-fixed.weights.regular]
+shape = 400
+menu = 400
+css = 400
+
+[buildPlans.iosevka-custom-fixed.weights.bold]
+shape = 700
+menu = 700
+css = 700
 
 [buildPlans.iosevka-custom-fixed.slopes]
 upright = "normal"

@@ -1,5 +1,5 @@
 diff --git a/config.json b/config.json
-index 62cdd60..a0682fe 100644
+index 62cdd60..382cff9 100644
 --- a/config.json
 +++ b/config.json
 @@ -1,6 +1,6 @@
@@ -43,7 +43,7 @@ index 62cdd60..a0682fe 100644
  			"naming": {
  				"en_US": "Sarasa Fixed",
  				"zh_CN": "Sarasa Fixed",
-@@ -65,44 +53,6 @@
+@@ -65,55 +53,11 @@
  				"ja_JP": "Sarasa Fixed",
  				"ko_KR": "Sarasa Fixed"
  			}
@@ -88,3 +88,58 @@ index 62cdd60..a0682fe 100644
  		}
  	},
  	"styleOrder": [
+-		"extralight",
+-		"extralightitalic",
+-		"light",
+-		"lightitalic",
+ 		"regular",
+ 		"italic",
+-		"semibold",
+-		"semibolditalic",
+ 		"bold",
+ 		"bolditalic"
+ 	],
+@@ -135,20 +79,6 @@
+ 		}
+ 	},
+ 	"styles": {
+-		"extralight": {
+-			"name": "Extralight"
+-		},
+-		"extralightitalic": {
+-			"name": "Extralight Italic",
+-			"uprightStyleMap": "extralight"
+-		},
+-		"light": {
+-			"name": "Light"
+-		},
+-		"lightitalic": {
+-			"name": "Light Italic",
+-			"uprightStyleMap": "light"
+-		},
+ 		"regular": {
+ 			"name": "Regular"
+ 		},
+@@ -156,13 +86,6 @@
+ 			"name": "Italic",
+ 			"uprightStyleMap": "regular"
+ 		},
+-		"semibold": {
+-			"name": "Semibold"
+-		},
+-		"semibolditalic": {
+-			"name": "Semibold Italic",
+-			"uprightStyleMap": "semibold"
+-		},
+ 		"bold": {
+ 			"name": "Bold"
+ 		},
+@@ -171,7 +94,7 @@
+ 			"uprightStyleMap": "bold"
+ 		}
+ 	},
+-	"subfamilyOrder": ["cl", "sc", "tc", "hc", "j", "k"],
++	"subfamilyOrder": ["j"],
+ 	"subfamilies": {
+ 		"cl": {
+ 			"name": "CL"
