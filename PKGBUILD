@@ -1,6 +1,6 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
 pkgname=ttc-sarasa-gothic-custom-git-rel
-pkgver=0.32.11
+pkgver=0.32.13
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
 arch=('any')
