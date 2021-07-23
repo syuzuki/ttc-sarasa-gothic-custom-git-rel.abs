@@ -34,6 +34,9 @@ x = "straight-motion-serifed"
 y = "cursive"
 z = "curly-serifless"
 
+[buildPlans.iosevka-custom-term.ligations]
+inherits = "dlig"
+
 [buildPlans.iosevka-custom-term.slopes]
 upright = "normal"
 italic = "italic"
