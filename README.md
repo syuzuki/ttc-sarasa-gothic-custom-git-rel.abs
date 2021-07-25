@@ -7,10 +7,10 @@ Generated families and styles are limited for faster build time.
 
 Built families:
 
-* Sarasa Gothic Nerd J
-* Sarasa UI Nerd J
-* Sarasa Term Nerd J
-* Sarasa Fixed Nerd J
+* Sarasa Nerd Gothic J
+* Sarasa Nerd UI J
+* Sarasa Nerd Term J
+* Sarasa Nerd Fixed J
 
 Built styles:
 
