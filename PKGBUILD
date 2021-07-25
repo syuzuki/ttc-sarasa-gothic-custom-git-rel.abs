@@ -1,14 +1,13 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
-pkgname=ttc-sarasa-gothic-custom-git-rel
+pkgname=ttf-sarasa-gothic-custom-nerd-gitrel
 pkgver=0.32.14
 pkgrel=1
-pkgdesc='Customized Sarasa Gothic; a CJK programming font.'
+pkgdesc='Customized Sarasa Gothic + Nerd Fonts'
 arch=('any')
 url='https://github.com/be5invis/Sarasa-Gothic'
 license=('custom:OFL')
 depends=()
 makedepends=('git' 'nodejs>=12.16.0' 'npm' 'python' 'python-fonttools' 'fontforge' 'otfcc' 'afdko' 'ttfautohint')
-replaces=('ttf-sarasa-gothic')
 source=(
     private-build-plans.toml
     sarasa-custom-config.patch
