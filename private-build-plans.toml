@@ -46,9 +46,17 @@ shape = 700
 menu = 700
 css = 700
 
-[buildPlans.iosevka-custom-term.slopes]
-upright = "normal"
-italic = "italic"
+[buildPlans.iosevka-custom-term.slopes.upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.iosevka-custom-term.slopes.italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
 
 [buildPlans.iosevka-custom-fixed]
 family = "Iosevka Custom Fixed"
@@ -95,6 +103,14 @@ shape = 700
 menu = 700
 css = 700
 
-[buildPlans.iosevka-custom-fixed.slopes]
-upright = "normal"
-italic = "italic"
+[buildPlans.iosevka-custom-fixed.slopes.upright]
+angle = 0
+shape = "upright"
+menu = "upright"
+css = "normal"
+
+[buildPlans.iosevka-custom-fixed.slopes.italic]
+angle = 9.4
+shape = "italic"
+menu = "italic"
+css = "italic"
