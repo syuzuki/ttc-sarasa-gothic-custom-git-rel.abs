@@ -58,6 +58,11 @@ shape = "italic"
 menu = "italic"
 css = "italic"
 
+[buildPlans.iosevka-custom-term.widths.normal]
+shape = 500
+menu = 5
+css = "normal"
+
 [buildPlans.iosevka-custom-fixed]
 family = "Iosevka Custom Fixed"
 spacing = "fixed"
@@ -114,3 +119,8 @@ angle = 9.4
 shape = "italic"
 menu = "italic"
 css = "italic"
+
+[buildPlans.iosevka-custom-fixed.widths.normal]
+shape = 500
+menu = 5
+css = "normal"
