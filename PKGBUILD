@@ -104,6 +104,6 @@ build() {
 }
 
 package() {
-    install -D -m 644 -t "${pkgdir}/usr/share/fonts/sarasa-gothic-nerd" nerd-fonts/out/*.ttf
+    install -D -m 644 -t "${pkgdir}/usr/share/fonts/sarasa-gothic-nerd" nerd-fonts/out/sarasa-nerd-{gothic,ui,term,fixed}-j-{regular,bold,italic,bolditalic}.ttf
     install -D -m 644 -t "${pkgdir}/usr/share/licenses/${pkgname}" Sarasa-Gothic/LICENSE
 }
