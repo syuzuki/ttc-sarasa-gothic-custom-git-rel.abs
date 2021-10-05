@@ -35,6 +35,7 @@ z = "curly-serifless"
 
 [buildPlans.iosevka-custom-term.ligations]
 inherits = "dlig"
+disables = ["dot-as-operator"]
 
 [buildPlans.iosevka-custom-term.weights.regular]
 shape = 400
