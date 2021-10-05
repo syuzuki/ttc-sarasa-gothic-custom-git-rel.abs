@@ -1,6 +1,6 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
 pkgname=ttf-sarasa-gothic-custom-nerd-gitrel
-pkgver=0.34.2
+pkgver=0.34.4
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic + Nerd Fonts'
 arch=('any')
