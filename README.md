@@ -1,16 +1,16 @@
-# `ttf-sarasa-gothic-custom-nerd-gitrel`
+# `ttf-sarasa-gothic-custom-gitrel`
 
-Arch Linux package builder for customized [Sarasa Gothic][sarasa] + [Nerd Fonts][nerd].
+Arch Linux package builder for customized [Sarasa Gothic][sarasa].
 
 This package can build [Sarasa Gothic][sarasa] with customized [Iosevka][iosevka] plans.
 Generated families and styles are limited for faster build time.
 
 Built families:
 
-* Sarasa Nerd Gothic J
-* Sarasa Nerd UI J
-* Sarasa Nerd Term J
-* Sarasa Nerd Fixed J
+* Sarasa Gothic J
+* Sarasa UI J
+* Sarasa Term J
+* Sarasa Fixed J
 
 Built styles:
 
@@ -21,7 +21,6 @@ Built styles:
 
 [sarasa]: https://github.com/be5invis/Sarasa-Gothic
 [iosevka]: https://github.com/be5invis/Iosevka
-[nerd]: https://github.com/ryanoasis/nerd-fonts
 
 ## Installation
 
