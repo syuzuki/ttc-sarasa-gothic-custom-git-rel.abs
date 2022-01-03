@@ -12,14 +12,12 @@ source=(
     private-build-plans.toml
     sarasa-custom-config.patch
     sarasa-epipe-workaround.patch
-    sarasa-export-glyph-names.patch
     fix-name.py
 )
 sha256sums=(
     SKIP
     SKIP
     9d7dcda23d80073da9539796ad9158ad87e0e222e96f2089c6f35e1a8787de90
-    342c7e1c5752105a9998bc4c7d619ed994f17a64f3d6352d0e0cf419a1425b4e
     ba561599a9647bc1719cc9952ad687066ec305f2a40e70e280f32792f8997bb8
 )
 
@@ -56,7 +54,6 @@ prepare() {
     git reset --hard "${sarasa_tag}"
     patch -N -p 1 <../sarasa-custom-config.patch
     patch -N -p 1 <../sarasa-epipe-workaround.patch
-    patch -N -p 1 <../sarasa-export-glyph-names.patch
 
     cd ../Iosevka
     local iosevka_tags="$(git for-each-ref --merged=@{u} --sort=-committerdate --format='%(refname:lstrip=2) %(committerdate:unix)' refs/tags)"
