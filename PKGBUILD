@@ -1,6 +1,6 @@
 # Maintainer: syuzuki <syuzuki15@gmail.com>
 pkgname=ttf-sarasa-gothic-custom-gitrel
-pkgver=0.36.0
+pkgver=0.36.1
 pkgrel=1
 pkgdesc='Customized Sarasa Gothic'
 arch=('any')
